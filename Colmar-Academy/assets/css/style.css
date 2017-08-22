@@ -1,0 +1,684 @@
+/***** Universal Styles *****/
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v13/PLygLKRVCQnA5fhu3qk5fQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ1-gdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  line-height: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(50,50,50);
+}
+
+h1{
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+h2 {
+	font-size: 2rem;
+	font-weight: 800;
+  line-height: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+h3 {
+	font-size: 1.4rem;
+	font-weight: 700;
+  line-height: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+h4 {
+	margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover, a:active{
+  color: rgba(249, 153, 27, 0.9);
+}
+
+button{
+  width: 20rem;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  white-space: normal;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  border-width: 2px;
+  border-style: solid;
+  color: rgb(255, 255, 255);
+  background-color: rgb(73, 82, 98);
+  border-color: rgb(89, 100, 145);
+  cursor:pointer;
+  text-align: center;
+  transition: color 0.3s ease, background-color 0.3s ease,
+  border-color 0.3s ease,
+  width 0.3s ease,
+  opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+button:hover, button:focus{
+  background-color: rgb(99, 122, 145);
+  border-color: rgb(99, 122, 145);
+}
+
+button:active {
+	background-color: rgba(225,225,225,0.4);
+	color: rgb(73, 82, 98);
+}
+
+i {
+	margin-right: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-container {
+  display: flex;
+  position:relative;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.border-bottom{
+    border-bottom: 0.5px solid rgba(125, 125, 125,0.5);
+}
+
+.colmar-green{
+    background-color: rgba(62, 199, 45, 0.8);
+}
+
+.col-left{
+  width: 60%;
+}
+
+.col-right{
+  width: 40%;
+}
+
+.col-right .info-row{
+  display: flex;
+}
+
+.col-right .description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 1rem;
+}
+
+.col-right .image-container{
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  width: 148px;
+  height: 148px;
+  margin: 1rem;
+}
+
+.mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  h1{
+    font-size:2rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-hidden{
+    display:none;
+  }
+  header p{
+    display: none;
+  }
+}
+
+/***** Header *****/
+
+header{
+  height: 64px;
+  background-color: white;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+
+header .flex-container{
+    width: 100%;
+    align-items: center;
+}
+
+.logo{
+  height: 32px;
+  padding-left: 24px;
+  flex-grow: 1;
+}
+
+.logo a{
+  color: rgb(75,75,75);
+  font-size: 1.4rem;
+  align-items: center;
+}
+
+.logo span:first-child{
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logo span:last-child{
+  opacity: 0.5;
+  transition: color 0.3s ease;
+}
+
+.logo:hover span, .logo:active span{
+	color: rgba(62, 199, 45, 0.7);
+}
+
+nav{
+  text-align: right;
+}
+
+nav ul{
+  list-style: none;
+  font-size: 0; /* *(1)* https://stackoverflow.com/questions/5256533/a-space-between-inline-block-list-items */
+}
+
+nav li{
+  display: inline;
+  padding-right:1rem;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+nav li:last-child{
+  padding-right: 1.5rem;
+}
+
+nav a{
+  color: black;
+  opacity: 0.75;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .content {
+    padding: 0.5rem 0;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    padding: 0;
+  }
+
+  nav a {
+		display: block;
+	}
+}
+
+/***** Banner *****/
+
+#banner{
+  align-items: center;
+  padding-top: 64px;
+}
+
+#banner .image-container{
+  background-image: url('../../assets/images/banner.jpg');
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: contain;
+  margin:32px 24px;
+  height: 30rem;
+}
+
+#banner .col-left{
+  width: 60%;
+}
+
+#banner .col-right{
+  width: 40%;
+}
+
+@media only screen and (max-width: 1024px) {
+  #banner{
+    align-items:flex-start;
+  }
+  #banner .image-container {
+		height: 20rem;
+	}
+  #banner .col-right{
+    margin:2rem 0;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#banner {
+		flex-direction: column;
+	}
+	#banner .image-container {
+    background-size: cover;
+		height: 15rem;
+		padding: 0;
+    margin:0 0 2rem 0;
+	}
+	#banner .col-left{
+		width: 100%;
+		padding: 0;
+    margin: 0;
+	}
+  #banner .col-right{
+		width: 100%;
+    margin:0 0 2rem 0;
+	}
+  #banner h1{
+    padding: 0 1rem;
+  }
+  #banner h3{
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+  #banner button{
+    margin: 0 1rem;
+    width: 90%;
+  }
+
+}
+
+/***** ROW #1 Info *****/
+#info .col-left .image-container{
+  background-image: url('../../assets/images/information-main.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  margin:2rem 1.5rem;
+  height: 30rem;
+}
+
+#info .text-content{
+  margin:2rem 1.5rem;
+}
+
+#info .qoute{
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-style: italic;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+
+#info .citation{
+  font-weight: bold;
+}
+
+#info .col-right{
+  border-left: 0.01rem solid rgba(125, 125, 125, 0.5);
+  padding-top: 1rem;
+}
+
+#info .col-right h3, #info .col-right p{
+  margin-bottom: 0.5rem;
+}
+
+#info .col-right .info-row:last-child{
+  background-color: rgba(62, 199, 45, 0.7);
+}
+
+#info .orientation.image-container{
+  background-image: url('../../assets/images/information-orientation.jpg');
+}
+
+#info .campus.image-container{
+  background-image: url('../../assets/images/information-campus.jpg');
+}
+
+#info .guest-lecture.image-container{
+  background-image: url('../../assets/images/information-guest-lecture.jpg');
+}
+
+@media only screen and (max-width: 1200px) {
+  #info .col-left .image-container{
+    height: 22rem;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  #info .col-left{
+    display: none;
+  }
+
+  #info .col-right{
+    width: 100%;
+		border: 0;
+		flex-shrink: 1;
+  }
+
+  #info .description{
+    width: auto;
+    margin-left: 1rem;
+  }
+
+  #info .col-right .info-row:last-child{
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #info .col-right{
+    padding: 0;
+  }
+	#info .info-row {
+		display: block;
+		padding: 0;
+    margin-bottom: 2rem;
+	}
+
+  .info-row:last-child .description{
+    padding-bottom: 0;
+  }
+
+  #info .orientation.image-container{
+    background-image: url('../../assets/images/information-orientation-mobile.jpg');
+  }
+
+  #info .campus.image-container{
+    background-image: url('../../assets/images/information-campus-mobile.jpg');
+  }
+
+  #info .guest-lecture.image-container{
+    background-image: url('../../assets/images/information-guest-lecture-mobile.jpg');
+  }
+
+  .info-row .image-container {
+		background-size: cover;
+    height:9rem;
+		width: auto;
+	}
+}
+
+/***** ROW #2 Learning *****/
+#learning-section{
+    background-color: rgba(62, 199, 45, 0.8);
+    flex-direction: column;
+}
+
+#learning h1{
+  margin: 2rem auto;
+}
+
+#learning{
+  flex-direction: column;
+}
+
+#learning h4{
+  opacity: 0.5;
+}
+
+#learning p{
+  margin-bottom: 1.5rem;
+}
+
+#learning .categories{
+  flex-direction: column;
+}
+
+#learning .row{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.course {
+	background-color: white;
+	width: 20.5rem;
+	height: 20.5rem;
+	margin: 0 1rem;
+}
+
+.software .image-container {
+	background: url("../../assets/images/course-software.jpg") no-repeat;
+}
+.computer-art .image-container {
+	background: url("../../assets/images/course-computer-art.jpg") no-repeat;
+}
+.design .image-container {
+	background: url("../../assets/images/course-design.jpg") no-repeat;
+}
+.data .image-container {
+	background: url("../../assets/images/course-data.jpg") no-repeat;
+}
+.business .image-container {
+	background: url("../../assets/images/course-business.jpg") no-repeat;
+}
+.marketing .image-container {
+	background: url("../../assets/images/course-marketing.jpg") no-repeat;
+}
+.course .image-container {
+	background-size: contain;
+	height: 0;
+	padding-top: 51.5%;
+}
+.course .description {
+	padding: 1rem 1rem 1.5rem 1rem;
+}
+
+@media only screen and (max-width: 1200px){
+  .course {
+  	width: 17rem;
+  	height: 18.5rem;
+  	margin: 0 0.3rem;
+  }
+
+  #learning h3{
+    font-size: 1.3rem;
+  }
+  #learning h4{
+    font-size: 0.9rem;
+  }
+  #learning p{
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+	#learning-section {
+    	background-color: transparent;
+    	padding-bottom: 2rem;
+	}
+  #learning h1 {
+		margin-bottom: 1rem;
+	}
+	#learning .desktop.categories {
+		display: none;
+	}
+  #learning .mobile.categories {
+		display: flex;
+    flex-direction: row;
+	}
+	#learning .mobile.categories .row {
+		width: 100%;
+		margin: 0 .25rem;
+    flex-direction: column;
+	}
+	#learning .mobile.categories button {
+    font-size: 1.4rem;
+    font-weight: normal;
+    width: 100%;
+    padding: 1rem;
+		align-items: center;
+		margin: 0.25rem 0;
+    text-align: left;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	#learning .mobile.categories {
+		flex-direction: column;
+	}
+	#learning .mobile.categories .row {
+		width: auto;
+	}
+  #learning .mobile.categories button{
+    font-size: 1.2rem;
+	}
+}
+
+/***** ROW #3 Thesis *****/
+#thesis{
+  flex-direction: column;
+}
+
+#thesis h1{
+  margin: 2rem auto;
+}
+
+#thesis .col-left{
+  padding: 0 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#thesis .media-container{
+  margin-bottom: 1.5rem;
+}
+
+#thesis video{
+	width: 100%;
+	height: auto;
+}
+
+#thesis h3{
+  margin-bottom: 0.5rem;
+}
+
+#thesis .video-caption{
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-style: italic;
+  opacity: 0.7;
+  margin: 0.5rem;
+}
+
+#thesis .fisma.image-container{
+  background-image: url('../../assets/images/thesis-fisma.jpg');
+}
+
+#thesis .now-and-then.image-container{
+  background-image: url('../../assets/images/thesis-now-and-then.jpg');
+}
+
+#thesis .col-right .info-row:first-child{
+  background-color: rgba(62, 199, 45, 0.7);
+}
+
+@media only screen and (max-width: 768px) {
+  #thesis .description-container, #thesis .col-right {
+		display: none;
+	}
+
+  #thesis .media-container{
+    margin-bottom: 0;
+  }
+
+  #thesis .col-left {
+		width: 100%;
+		padding: 0;
+    margin-bottom: 1.5rem;
+	}
+}
+
+/***** Footer *****/
+footer{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1.5rem;
+}
+
+footer li{
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-nav {
+		display: none;
+	}
+  footer p{
+    font-size: 0.8rem;
+    margin: 1rem 0;
+  }
+}
